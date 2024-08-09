@@ -26,7 +26,7 @@ function App() {
     },
     {
       id:'complaints',
-      message:'Please select the sector which you have complaint.',
+      message:'Which sector is your complaint about?',
       trigger:'option_2'
     },
     {
@@ -41,7 +41,7 @@ function App() {
     },
     {
       id:'support',
-      message:'Our technical will contact you with few seconds',
+      message:'Please hold for just a moment while we connect you with a customer support representative. Alternatively, you can also reach us at hackpuyals@gmail.com.',
       trigger:'end'
     },
     {
@@ -57,7 +57,7 @@ function App() {
       options:[
         {value:"Website_Downtime",label:"Website Downtime",trigger:"option_wd"},
         {value:"Slow_Load_Times",label:"Slow Load Times",trigger:"option_slt"},
-        {value:"Form_Submission_Errors",label:"Form Submission Errors",trigger:"option_fse"},
+        {value:"Form_Submission_Error",label:"Form Submission Error",trigger:"option_fse"},
         {value:"Data_Accuracy_and_Updates",label:"Data Accuracy and Updates",trigger:"option_dau"},
       ]
     },
@@ -87,42 +87,57 @@ function App() {
         {value:"Consumer_Protection",label:"Consumer Protection",trigger:"option_cp"},
         {value:"Housing_and_Urban_Development",label:"Housing and Urban Development",trigger:"option_hud"},
         {value:"Civil_Rights",label:"Civil Rights",trigger:"option_cr"},
-        {value:"Any_Other",label:"Any Other",trigger:"msg_1"},
+        {value:"Others",label:"Others",trigger:"msg_1"},
       ]
     },
     {
       id:'option_wd',
-      message:'Due to some internal work and heavy traffic the website is down, Our technical will contact you with few seconds',
+      message:'Due to internal maintenance and high traffic, our website is currently down.',
+      trigger:'option_wd_1'
+    },
+    // {
+    //   id:'option_wd_1',
+    //   message:'Kindly send an e-mail to hackpuyals@gmail.com',
+    //   trigger:'option_wd_2'
+    // },
+    {
+      id:'option_wd_1',
+      message:'Connecting you with a support representative... or email us at hackpuyals@gmail.com.',
       trigger:'end'
     },
     {
       id:'option_slt',
-      message:'Due to heavy load and large date the website is running slow, Our technical will contact you with few seconds',
+      message:'Due to a heavy load and large amounts of data, our website is currently running slowly.',
+      trigger:'option_slt_1'
+    },
+    {
+      id:'option_slt_1',
+      message:'Connecting you with a support representative... or email us at hackpuyals@gmail.com.',
       trigger:'end'
     },
     {
       id:'option_fse',
-      message:'Our Support will contact you with few seconds',
+      message:'Please hold for just a moment while we connect you with a customer support representative. Alternatively, you can also reach us at hackpuyals@gmail.com.',
       trigger:'end'
     },
     {
       id:'option_dau',
-      message:'Our Support will contact you with few seconds',
+      message:'Please hold for just a moment while we connect you with a customer support representative. Alternatively, you can also reach us at hackpuyals@gmail.com.',
       trigger:'end'
     },
     {
       id:'steps_hff',
-      message:'step 1: Go to Dashboard',
+      message:'Step 1: Go to Dashboard',
       trigger:'steps_hff_1'
     },
     {
       id:'steps_hff_1',
-      message:'step 2: Click the options icon ☰',
+      message:'Step 2: Click the options icon ☰',
       trigger:'steps_hff_2'
     },
     {
       id:'steps_hff_2',
-      message:'step 3: Select the option Complaints',
+      message:'Step 3: Click on Complaints',
       trigger:'steps_hff_3'
     },
     {
@@ -132,96 +147,96 @@ function App() {
     },
     {
       id:'steps_hff_4',
-      message:'step 5: If you have any proof of that complaint upload the document in the form (optional)',
+      message:'Step 5: If you have any proof of that complaint, upload the document in the form (If Mandatory)',
       trigger:'steps_hff_5'
     },
     {
       id:'steps_hff_5',
-      message:'step 6: After fill all the details submit the form',
-      trigger:'steps_hff_6'
-    },
-    {
-      id:'steps_hff_6',
-      message:'step 7: You have successfully raised the complaint',
+      message:'Step 6: After fill all the details, submit the form',
+    //   trigger:'steps_hff_6'
+    // },
+    // {
+    //   id:'steps_hff_6',
+    //   message:'step 7: You have successfully raised the complaint',
       trigger:'end'
     },
     {
       id:'steps_ef',
-      message:'step 1: Go to Dashboard',
+      message:'Step 1: Go to Dashboard',
       trigger:'steps_ef_1'
     },
     {
       id:'steps_ef_1',
-      message:'step 2: Click the options icon ☰',
+      message:'Step 2: Click the options icon ☰',
       trigger:'steps_ef_2'
     },
     {
       id:'steps_ef_2',
-      message:'step 3: Select the option Your Complaints',
+      message:'Step 3: Click on Complaints',
       trigger:'steps_ef_3'
     },
     {
       id:'steps_ef_3',
-      message:'step 4: Select the form which you have to edit',
+      message:'Step 4: Select the form which you have to edit',
       trigger:'steps_ef_4'
     },
     {
       id:'steps_ef_4',
-      message:'step 5: Edit the details',
+      message:'Step 5: Edit the details',
       trigger:'steps_ef_5'
     },
     {
       id:'steps_ef_5',
-      message:'step 6:  After editing the details submit the form',
+      message:'Step 6:  After editing the details, submit the form',
       trigger:'end'
     },
     {
       id:'steps_df',
-      message:'step 1: Go to Dashboard',
+      message:'Step 1: Go to Dashboard',
       trigger:'steps_df_1'
     },
     {
       id:'steps_df_1',
-      message:'step 2: Click the options icon ☰',
+      message:'Step 2: Click the options icon ☰',
       trigger:'steps_df_2'
     },
     {
       id:'steps_df_2',
-      message:'step 3: Select the option Your Complaints',
+      message:'Step 3: Click on Complaints',
       trigger:'steps_df_3'
     },
     {
       id:'steps_df_3',
-      message:'step 4: Select the form which you have to delete',
+      message:'Step 4: Select the form which you have to delete',
       trigger:'steps_df_4'
     },
     {
       id:'steps_df_4',
-      message:'step 5: select the option delete',
-      trigger:'steps_df_5'
-    },
-    {
-      id:'steps_df_5',
-      message:'step 6: Your Form has been deleted successfully',
+      message:'Step 5: Click on delete option',
+    //   trigger:'steps_df_5'
+    // },
+    // {
+    //   id:'steps_df_5',
+    //   message:'step 6: Your Form has been deleted successfully',
       trigger:'end'
     },
     {
       id:'option_ps',
-      message:'select which type of Public Services problem you have',
+      message:'select the type of Public Services issuse you are experencing',
       trigger:'option_ps_1'
     },
     { 
       id:'option_ps_1',
       options:[
-        {value:"public_transportation",label:"public transportation",trigger:"all"},
-        {value:"postal_services",label:"postal services",trigger:"all"},
-        {value:"utilities",label:"utilities",trigger:"all"},
+        {value:"public_transportation",label:"Public Transportation",trigger:"all"},
+        {value:"postal_services",label:"Postal Services",trigger:"all"},
+        {value:"utilities",label:"Utilities",trigger:"all"},
         {value:"Others",label:"Others",trigger:"msg_1"},
       ]
     },
     {
       id:'option_i',
-      message:'select which type of Infrastructure problem you have',
+      message:'Select the type of Infrastructure problem you are experencing',
       trigger:'option_i_1'
     },
     {
@@ -229,14 +244,14 @@ function App() {
       options:[
         {value:"Roads",label:"Roads",trigger:"all"},
         {value:"bridges",label:"Bridges",trigger:"all"},
-        {value:"public_buildings",label:"public buildings",trigger:"all"},
+        {value:"public_buildings",label:"Public Buildings",trigger:"all"},
         {value:"parks",label:"Parks",trigger:"all"},
         {value:"others",label:"Others",trigger:"msg_1"},
       ]
     },
     {
       id:'option_as',
-      message:'select which type of Administrative Services problem you have',
+      message:'Select the type of Administrative Services issuse you are experencing',
       trigger:'option_as_1'
     },
     {
@@ -245,12 +260,12 @@ function App() {
         {value:"Passports",label:"Passports",trigger:"all"},
         {value:"Birth_certificates",label:"Birth Certificates",trigger:"all"},
         {value:"Driver's_licenses",label:"Driver's Licenses",trigger:"all"},
-        {value:"others",label:"others",trigger:"msg_1"},
+        {value:"others",label:"Others",trigger:"msg_1"},
       ]
     },
     {
       id:'option_leps',
-      message:'select which type of Law Enforcement and Public Safety problem you have',
+      message:'Select the type of Law Enforcement and Public Safety problem you are experencing',
       trigger:'option_leps_1'
     },
     {
@@ -263,7 +278,7 @@ function App() {
     },
     {
       id:'option_ei',
-      message:'select which type of Environmental Issues problem you have',
+      message:'Select which type of Environmental Issues you are experencing',
       trigger:'option_ei_1'
     },
     {
@@ -277,7 +292,7 @@ function App() {
     },
     {
       id:'option_hs',
-      message:'select which type of Health Services problem you have',
+      message:'Select the type of Health Services problem you are experencing',
       trigger:'option_hs_1'
     },
     {
@@ -290,7 +305,7 @@ function App() {
     },
     {
       id:'option_e',
-      message:'select which type of Education problem you have',
+      message:'Select the type of Education problem you are experencing',
       trigger:'option_e_1'
     },
     {
@@ -304,7 +319,7 @@ function App() {
     },
     {
       id:'option_ss',
-      message:'select which type of Social Services problem you have',
+      message:'Select the type of Social Services problem you are experencing',
       trigger:'option_ss_1'
     },
     {
@@ -318,7 +333,7 @@ function App() {
     },
     {
       id:'option_cm',
-      message:'select which type of Corruption and Misconduct problem you have',
+      message:'Select the type of Corruption and Misconduct problem you are experencing',
       trigger:'option_cm_1'
     },
     {
@@ -332,7 +347,7 @@ function App() {
     },
     {
       id:'option_tfs',
-      message:'select which type of Taxes and Financial Services problem you have',
+      message:'Select the type of Taxes and Financial Services issues you are facing',
       trigger:'option_tfs_1'
     },
     {
@@ -346,7 +361,7 @@ function App() {
     },
     {
       id:'option_lri',
-      message:'select which type of Legal and Regulatory Issues problem you have',
+      message:'Select the type of Legal and Regulatory Issues you are facing',
       trigger:'option_lri_1'
     },
     {
@@ -359,7 +374,7 @@ function App() {
     },
     {
       id:'option_el',
-      message:'select which type of Employment and Labor problem you have',
+      message:'Select the type of Employment and Labor problem you are facing',
       trigger:'option_el_1'
     },
     {
@@ -373,7 +388,7 @@ function App() {
     },
     {
       id:'option_cp',
-      message:'select which type of Consumer Protection problem you have',
+      message:'Select the type of Consumer Protection problem you are facing',
       trigger:'option_cp_1'
     },
     {
@@ -386,7 +401,7 @@ function App() {
     },
     {
       id:'option_hud',
-      message:'select which type of Housing and Urban Development problem you have',
+      message:'Select the type of Housing and Urban Development problem you are experencing',
       trigger:'option_hud_1'
     },
     {
@@ -401,7 +416,7 @@ function App() {
     },
     {
       id:'option_cr',
-      message:'select which type of Civil Rights problem you have',
+      message:'Select the type of Civil Rights problem you are facing',
       trigger:'option_cr_1'
     },
     {
@@ -414,12 +429,17 @@ function App() {
     },
     {
       id:'all',
-      message:'Go to Complaints section and fill the form',
+      message:'Go to Complaints section and file a complaint',
       trigger:'ss'
     },
     {
       id:'ss',
-      message:'If you don\'t know how to fill the form select go back to the main menu and select service issues and check it',
+      message:'Need help with the form? Go to Main Menu > Service Issues for guidance',
+      trigger:'ss_1'
+    },
+    {
+      id:'ss_1',
+      message:'Else give Continue',
       trigger:'Main_menu' 
     },
     {
@@ -431,34 +451,56 @@ function App() {
     },
     {
       id:'Continue',
-      message:'Still, If your complaint is not solved',
+      message:'IF your issue remains unresolved',
       trigger:'support'
     },
     {
       id:'Feedback',
-      message:'Please enter your feedback regarding this G.O',
+      message:'Please select your feedback regarding the G.O',
+      trigger:'options_f'
+    },
+    {
+      id:'options_f',
+      options:[
+        {value:"What_do_you_like/dislike_about_the_G.O?",label:"What do you like/dislike about the G.O?",trigger:"f_1"},
+        {value:"Is_there_anything_that_needs_clarification_or_improvement?",label:"Is there anything that needs clarification or improvement?",trigger:"f_1"},
+        {value:"Do_you_have_any_suggestions_for_future_modifications?",label:"Do you have any suggestions for future modifications?",trigger:"f_1"},
+        {value:"Other_comments_or_concerns?",label:"Other comments or concerns?",trigger:"f_1"},
+      ]
+    },
+    {
+      id:'f_1',
+      message:'Please enter your feedback',
       trigger:'msg_2'
     },
     {
       id:'msg_2',
       user:true,
+      trigger:'end_1'
+    },
+    {
+      id:'end_1',
+      message:'Your response has been recorded',
       trigger:'end'
     },
     {
       id:'Poll',
-      message:'Are you okay with this G.O',
+      message:'Feedback on G.O',
       trigger:'options_3'
     },
     {
       id:'options_3',
       options:[
-        {value:"Okay", label:"Okay",trigger:"end"},
-        {value:"Not_Okay", label:"Not Okay",trigger:"end"},
+        {value:"Strongly_Satisfied", label:"Strongly Satisfied",trigger:"end"},
+        {value:"Somewhat_Satisfied", label:"Somewhat Satisfied",trigger:"end"},
+        {value:"Neutral", label:"Neutral",trigger:"end"},
+        {value:"Somewhat_Dissatisfied", label:"Somewhat Dissatisfied",trigger:"end"},
+        {value:"Strongly_Dissatisfied", label:"Strongly Dissatisfied",trigger:"end"},
       ]
     },
     {
       id:'idea submission',
-      message:'Here you can give any suggestions or new ideas for the problem,If you have please enter below.',
+      message:'Do you have an innovative solution or suggestion to address any issue? Please enter your ideas below and help us improve!(Max 200 words)',
       trigger:'msg_3'
     },
     {
